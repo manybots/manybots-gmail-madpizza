@@ -1,0 +1,13 @@
+==============
+
+Miam! Madpizza Agent for Manybots has been installed.
+
+Now what?
+
+- Run `bundle exec rake db:migrate` to get your db up to speed
+- Go to '/manybots-gmail-madpizza' and start tracking your orders (you might have to relaunch the server)
+
+You can find help throught the Github page.
+https://github.com/manybots/manybots-gmail-madpizza
+
+==============

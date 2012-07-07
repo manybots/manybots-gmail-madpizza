@@ -1,0 +1,18 @@
+<h1>Madpizza Order #<%= @meal.id %></h1>
+
+<p>Date: <%= l @meal.ordered_at, :format => :long %></p>
+<p>Price:  <%= @meal.price %> <%= @meal.currency %></p>
+
+<ul>
+  <%- for product in @meal.products -%>
+    <li class="clearfix">
+      <img src="<%= product[:image] %>" align="left">
+      <%= product[:name] %>: <%= product[:total] %> <%= @meal.currency %> (<%= product[:units] %> * <%= product[:price] %>)
+      <br>
+      <span class="meta"><%= product[:ingredients].join(', ') %></span>
+    </li>
+  <%- end -%>
+</ul>
+
+
+<p class="button save medium"><a href="#">ORDER AGAIN NOW!</a></p>

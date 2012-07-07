@@ -1,0 +1,18 @@
+<div class="clearfix" style="margin-bottom: 20px;">
+  <%= image_tag(ManybotsGmailMadpizza.app.app_icon_url, :align => :left, :width => 40, :style=> 'margin-right: 10px;') %>
+  <h2>Manybots Gmail Madpizza Agent</h2>
+</div>
+
+<div class="card">
+  <h4>
+    Agent is <strong><%= @schedule == true ? 'ON' : 'OFF' %></strong>
+  </h4>
+  
+  <p>Daily, the Gmail Madpizza Agent will look for Madpizza order confirmation emails in your stream and convert them to meal order objects, that will give you a better view of your habits.</p>
+
+  <%- if @schedule == true -%> 
+    <p><%= link_to 'Stop the agent', toggle_path, method: :post %></p>
+  <%- else -%>
+    <p><%= link_to 'Start the agent', toggle_path, method: :post %></p>
+  <%- end -%>
+</div>
